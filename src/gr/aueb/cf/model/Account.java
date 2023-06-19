@@ -9,10 +9,10 @@ public class Account extends IdentifiableEntity {
     private String iban;
     private double balance;
 
-    public Account(){}
+    public Account() {
+    }
 
     public Account(User holder, String iban, double balance) {
-
         this.holder = holder;
         this.iban = iban;
         this.balance = balance;
@@ -51,16 +51,16 @@ public class Account extends IdentifiableEntity {
                 '}';
     }
 
-    //Public API
+    // Public API
 
     /**
      *
      * @param amount
      * @throws NegativeAmountException
      */
-    public void deposit(double amount) throws NegativeAmountException {
+    public void deposit(double amount) throws NegativeAmountException  {
         try {
-            if  (amount < 0) {
+            if (amount < 0) {
                 throw new NegativeAmountException(amount);
             }
 
@@ -87,7 +87,7 @@ public class Account extends IdentifiableEntity {
             if (!isSsnValid(ssn)) throw new SsnNotValidException(ssn);
 
             balance -= amount;
-        } catch (InsufficientBalanceException | SsnNotValidException | NegativeAmountException e) {
+        } catch (InsufficientBalanceException | SsnNotValidException | NegativeAmountException e)  {
             System.err.println("Error: withdrawal");
             throw e;
         }

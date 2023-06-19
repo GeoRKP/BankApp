@@ -13,10 +13,10 @@ public class User extends IdentifiableEntity {
         this.ssn = ssn;
     }
 
-    //Copy Constructor
+    // Copy Constructor
     public User(User user) {
-        firstname = getFirstname();
-        lastname = getLastname();
+        firstname = user.getFirstname();
+        lastname = user.getLastname();
         ssn = user.getSsn();
     }
 
@@ -52,4 +52,6 @@ public class User extends IdentifiableEntity {
                 ", ssn='" + ssn + '\'' +
                 '}';
     }
+
+
 }

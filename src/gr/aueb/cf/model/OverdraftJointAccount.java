@@ -3,11 +3,12 @@ package gr.aueb.cf.model;
 import gr.aueb.cf.exceptions.NegativeAmountException;
 import gr.aueb.cf.exceptions.SsnNotValidException;
 
-public class OverDraftAccount extends JointAccount {
+public class OverdraftJointAccount extends JointAccount {
 
-    public OverDraftAccount() {}
+    public OverdraftJointAccount() {}
 
-    public OverDraftAccount(User holder, String iban, double balance, User secondHolder) {
+    public OverdraftJointAccount(User holder, String iban,
+                                 double balance, User secondHolder) {
         super(holder, iban, balance, secondHolder);
     }
 
